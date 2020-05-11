@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+     <script src="doggoscript.js"></script> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Doggo API</title>
+        <link rel="stylesheet" type="text/css" href="dogstyles.css">
+    </head>
+    <body>
+        
+        <h3>The best kind of API,</h3>
+        <h1>The Doggo API</h1>
+        
+        <p>Select a breed from the list to get three pictures of dogs of a specific breed or press the button to get three pictures of random puppers. You can get a new set of random pictures of the same breed by clicking the heading that appears after selecting a dog breed.</p>
+        <br>
+        
+        <select name="mySelect" id="breed" onchange="breedPic()">
+            <option value="" disabled selected hidden>Select a breed</option>
+            <option value="airedale">Airedale</option>
+            <option value="akita">Akita</option>
+            <option value="australian/shepherd">Australian shepherd</option>
+            <option value="appenzeller">Appenzeller</option>
+            <option value="basenji">Basenji</option>
+            <option value="beagle">Beagle</option>
+            <option value="borzoi">Borzoi</option>
+            <optgroup label="Cattledog">
+                <option value="cattledog/australian">Australian cattledog</option>
+            </optgroup>
+            <option value="chihuahua">Chihuahua</option>
+            <option value="chow">Chow chow</option>
+            <optgroup label="Corgi">
+                <option value="corgi/cardigan">Cardigan corgi</option>
+            </optgroup>
+            <option value="cotondetulear">Coton detulear</option>
+            <option value="dalmatian">Dalmatian</option>
+            <option value="dhole">Dhole</option>
+            <option value="doberman">Doberman</option>
+            <option value="eskimo">Eskimo</option>
+            <optgroup label="Finnish">
+                <option value="finnish/lapphund">Finnish lapphund</option>
+            </optgroup>
+            <optgroup label="Bichon">
+                <option value="frise/bichon">Bichon frisé</option>
+                <option value="havanese">Havanese</option>
+            </optgroup>
+            <option value="germanshepherd">German shepherd</option>
+            <option value="greyhound/italian">Italian greyhound</option>
+            <optgroup label="Hound">
+                <option value="hound/afghan">Afgan hound</option>
+                <option value="hound/basset">Basset hound</option>
+                <option value="hound/blood">Blood hound</option>
+                <option value="hound/english">English hound</option>
+                <option value="hound/ibizan">Ibizan hound</option>
+                <option value="hound/plott">Plott hound</option>
+                <option value="hound/walker">Walker hound</option>
+            </optgroup>
+            <option value="husky">Husky</option>
+            <option value="keeshond">Keeshond</option>
+            <option value="kelpie">Kelpie</option>
+            <option value="leonberg">Leonberg</option>
+            <optgroup label="Mastiff">
+                <option value="mastiff/bull">Bull mastiff</option>
+                <option value="mastiff/english">English mastiff</option>
+                <option value="mastiff/tibetian">Tibetian mastiff</option>
+            </optgroup>
+            <option value="mix">Mixed</option>
+            <optgroup label="Mountain">
+                <option value="mountain/bernese">Bernese mountaindog</option>
+                <option value="mountain/swiss">Swiss mountaindog</option>
+            </optgroup>
+            <option value="newfoundland">Newfoundland</option>
+            <option value="otterhound">Otterhound</option>
+            <option value="papillon">Papillon</option>
+            <option value="pomeranian">Pomeranian</option>
+            <optgroup label="Poodle">
+                <option value="poodle/toy">Toy poodle</option>
+                <option value="poodle/miniature">Miniature poodle</option>
+                <option value="poodle/standard">Standard poodle</option>
+            </optgroup>
+            <option value="pyrenees">Pyrenees</option>
+            <optgroup label="Retriever">
+                <option value="retriever/chesapeake">Chesapeake retriever</option>
+                <option value="retriever/curly">Curly retriever</option>
+                <option value="retriever/flatcoated">Flatcoated retriever</option>
+                <option value="retriever/golden">Golden retriever</option>
+            </optgroup>
+            <option value="rottweiler">Rottweiler</option>
+            <option value="saluki">Saluki</option>
+            <option value="samoyed">Samoyed</option>
+            <option value="schipperke">Schipperke</option>
+            <optgroup label="Schnauzer">
+                <option value="schnauzer/miniature">Miniature schnauzer</option>
+                <option value="schnauzer/giant">Giant schnauzer</option>
+            </optgroup>
+            <option value="shiba">Shiba</option>
+            <option value="vizsla">Vizsla</option>
+            <option value="whippet">Whippet</option>
+        </select>
+        
+        <button onclick="randomDoggo()">Random</button>
+        <br><br>
+        <div id="resultinfo" onclick="newPics()"></div>
+        <div id="doggoPic" class="contents"></div>
+        
+        <footer>Dog pictures via <a href="https://dog.ceo/dog-api/" target="_blank">dog.ceo</a></footer>
+    </body>
+    
+</html>
